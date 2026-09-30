@@ -1,6 +1,5 @@
 import { MapPin, Phone, Mail, Clock, ArrowUp } from "lucide-react";
 import { Link } from "wouter";
-import { MapView } from "@/components/Map";
 import { trackClick } from "@/lib/analytics";
 
 interface FooterProps {
@@ -88,7 +87,6 @@ export default function Footer({ onScrollToTop }: FooterProps) {
                 </a>
               </li>
             </ul>
-            <MapView className="mt-2 rounded-xl border border-white/10" />
           </div>
 
           {/* Column 3: Legal Links & Back to Top */}
