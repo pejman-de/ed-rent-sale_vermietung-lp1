@@ -50,7 +50,7 @@ const formSchema = z.object({
   email: z.string().min(1, "Bitte geben Sie Ihre E-Mail-Adresse an.").email("Bitte geben Sie eine gültige E-Mail-Adresse an."),
   telefon: z.string().optional(),
   consent: z.boolean().refine((val) => val === true, {
-    message: "Bitte stimmen Sie der Datenschutzerklärung zu.",
+    message: "Bitte bestätigen Sie, dass Sie die Datenschutzerklärung zur Kenntnis genommen haben.",
   }),
 
   // Hidden fields
@@ -679,7 +679,7 @@ function LeadForm() {
                           >
                             Datenschutzerklärung
                           </a>{" "}
-                          gelesen und stimme der Verarbeitung meiner Daten zu. *
+                          zur Kenntnis genommen. *
                         </Label>
                       </div>
                       {errors.consent && (
